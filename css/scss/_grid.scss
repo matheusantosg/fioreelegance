@@ -1,0 +1,52 @@
+// COLORS
+
+$primary: #373773;
+$primary-medium: #2D2D77;
+$blue-light: #4C7DC7;
+$white: #ffffff;
+$text-cinza: #808080;
+
+body {
+	min-width: 320px;
+	font-size: 1rem;
+	color: #000;
+	font-family: 'Rubik', sans-serif;
+}
+
+.shell {
+	max-width: 1160px;
+	margin: 0 auto;
+
+	/* Mobile */
+	@media (max-width: 767px) {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.main {
+	margin-top: 109px;
+}
+
+
+
+.image__desk {
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+
+.image__mobile {
+	display: none;
+
+	@media (max-width: 768px) {
+		display: block;
+	}
+}
+
+.title__blue {
+	@include font-rubik(42px, 500);
+	color: $primary;
+	text-transform: uppercase;
+}

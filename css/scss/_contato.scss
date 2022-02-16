@@ -1,0 +1,73 @@
+.contato {
+  margin: 150px auto;
+
+  &__maps {
+    width: 100%;
+    height: 450px;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__form {
+    margin: 50px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .wpcf7 {
+      width: 65%;
+      margin: 0 auto;
+
+      form {
+        font-family: $primaryFont;
+
+        p {
+          display: flex;
+          flex-direction: column;
+          margin: 0 auto 20px;
+
+          >input {
+            width: 50%;
+            height: 40px;
+            margin: 0 auto;
+            border: none;
+            border-radius: 5px;
+            background-color: $nude;
+            color: $white;
+            font-size: calculadora-rem(18);
+            text-transform: uppercase;
+            cursor: pointer;
+          }
+
+          label {
+            font-size: calculadora-rem(12);
+
+            span {
+              display: block;
+              width: 100%;
+              height: 40px;
+
+              input,
+              textarea {
+                width: 100%;
+                border-radius: 5px;
+                border: 1px solid $nude;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__title-form {
+    text-transform: uppercase;
+    font-size: calculadora-rem(18);
+    font-family: $primaryFont;
+    font-weight: 600;
+  }
+}

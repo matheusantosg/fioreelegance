@@ -1,0 +1,169 @@
+.header {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255,255,255, .7);
+  box-shadow: 0 0 10px rgba(0,0,0, .3);
+  z-index: 5;
+
+  &__center {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    
+    @media screen and(max-width: 1024px) {
+      width: 100%;
+      justify-content: center;
+      position: relative;
+    }
+  }
+
+  &__menu-mobile {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+
+    &::before {
+      content: '\e9bd';
+      font-family: $ico;
+      font-size: calculadora-rem(30);
+      color: #262523;
+    }
+
+    &.active {
+      z-index: 5;
+    }
+  }
+
+  &__logo {
+    width: 200px;
+
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__menu {
+    width: calc(100% - 400px);
+
+    @media screen and(max-width: 1024px) {
+      position: fixed;
+      top: 0;
+      right: 200%;
+      width: 90%;
+      height: 50%;
+      background: $white;
+      padding: 30px 50px;
+      transition: .5s;
+      z-index: 4;
+
+      &.active {
+        right: 0;
+      }
+    }
+  }
+
+  &__social-media {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @media screen and(max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__facebook {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: .3s;
+
+    &::before {
+      content: '\ea90';
+      font-size: 1rem;
+      font-family: $ico;
+      font-weight: 500;
+      color: $black;
+      transition: .3s;
+    }
+
+    &:hover {
+      background-color: $nude;
+
+      &::before {
+        color: $white;
+      }
+    }
+  }
+
+  &__instagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: .3s;
+
+    &::before {
+      content: '\ea92';
+      font-size: 1rem;
+      font-family: $ico;
+      font-weight: 500;
+      color: $black;
+      transition: .3s;
+    }
+
+    &:hover {
+      background-color: $nude;
+
+      &::before {
+        color: $white;
+      }
+    }
+  }
+
+  &__whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: .3s;
+
+    &::before {
+      content: '\ea93';
+      font-size: 1rem;
+      font-family: $ico;
+      font-weight: 500;
+      color: $black;
+      transition: .3s;
+    }
+
+    &:hover {
+      background-color: $nude;
+
+      &::before {
+        color: $white;
+      }
+    }
+  }
+}

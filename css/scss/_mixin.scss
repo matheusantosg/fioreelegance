@@ -1,0 +1,96 @@
+@mixin font-rubik($font-size: 16px,
+  $font-weight: 400,
+) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: 'Rubik', sans-serif;
+}
+
+@mixin banner--content {
+  .content__banner {
+    width: 100%;
+    position: relative;
+
+    /* --------------   CONTEUDO DO BANNER NA HOME  ------------------------ */
+    &.home {
+      .bg__content {
+        .title__bg {
+          max-width: 685px;
+          line-height: 50px;
+          margin-bottom: 220px;
+        }
+
+        &::before {
+          height: 436px;
+        }
+
+        .description__banner {
+          position: absolute;
+          left: 10%;
+          bottom: 10%;
+          @include font-rubik(22px, 300);
+          color: $white;
+          max-width: 685px;
+          margin-bottom: 130px;
+        }
+
+        .btn__outline__white {
+          position: absolute;
+          left: 10%;
+          bottom: 10%;
+          margin-bottom: 40px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    /* --------------   CONTEUDO DO BANNER NA HOME  ------------------------ */
+
+    .image__desk,
+    .image__mobile {
+      width: 100%;
+
+      img {
+        object-fit: contain;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+
+
+    .bg__content {
+      position: relative;
+      display: flex;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -48px;
+        left: 81px;
+        border-radius: 5px;
+        background-color: $primary-medium;
+        mix-blend-mode: multiply;
+        width: 735px;
+        min-height: 241px;
+        padding: 71px 0 0 60px;
+        opacity: 1;
+      }
+    }
+
+    .title__bg {
+      @include font-rubik(42px, 500);
+      color: $white;
+      text-transform: uppercase;
+      position: absolute;
+      left: 10%;
+      bottom: 10%;
+      margin-bottom: 80px;
+    }
+  }
+}
+
+@function calculadora-rem($font-size) {
+	$tamanhoRem: $font-size/16;
+	@return $tamanhoRem + rem;
+}
