@@ -13,9 +13,6 @@
 	<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/og-image.png" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/favicon/favicon-16x16.png">
@@ -35,6 +32,12 @@
 	?>
 
 <header class="header">
+	<article class="header__informativo">
+		<div class="header__informativo-wrapper container-center">
+			<p class="header__informativo-left">Loja especializada em aluguel de vestidos!</p>
+			<a href="/contato" class="header__informativo-right">Agende sua visita aqui</a>
+		</div>
+	</article>
     <section class="header__center container-center">
       <div class="header__logo">
         <a href="/">
@@ -166,7 +169,7 @@
       <section class="header__social-media">
         <a href="https://www.facebook.com/fioreelegance" target="_blank" class="header__facebook"></a>
         <a href="https://www.instagram.com/fioreelegance/" target="_blank" class="header__instagram"></a>
-        <a href="https://api.whatsapp.com/send?phone=5511940715730" target="_blank" class="header__whatsapp"></a>
+        <a href="https://api.whatsapp.com/send?phone=5511966414884" target="_blank" class="header__whatsapp"></a>
       </section>
     </section>
   </header>
